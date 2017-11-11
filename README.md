@@ -1,6 +1,52 @@
 # Weekdays-Selector
 Widget for selecting the weekdays
 
+## Installation
+
+### Gradle
+
+Add the JitPack repository to your root build.gradle file
+
+```groovy
+allprojects {
+    repositories {
+        // ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Add the dependency
+
+```groovy
+dependencies {
+    compile 'com.github.DavidProdinger:weekdays-selector:1.0.1'
+}
+```
+
+### Maven
+
+Add the JitPack repository to your build file
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+Add the dependency
+
+```xml
+<dependency>
+    <groupId>com.github.DavidProdinger</groupId>
+    <artifactId>weekdays-selector</artifactId>
+    <version>1.0.1</version>
+</dependency>
+```
+
 ## Usage
 
 ### In your layout file
