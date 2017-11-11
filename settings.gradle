@@ -1,0 +1,4 @@
+include ':sample'
+
+include ':weekdaysselector'
+project(':weekdaysselector').projectDir = new File('weekdaysselector')
