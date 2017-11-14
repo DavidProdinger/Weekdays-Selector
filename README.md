@@ -197,3 +197,13 @@ if (widget.isInEditMode()){
     // Do Something
 }
 ```
+
+### Set editable
+
+```java
+// Enable the widget
+widget.setEditable(true);
+
+// Disable the widget
+widget.setEditable(false);
+```

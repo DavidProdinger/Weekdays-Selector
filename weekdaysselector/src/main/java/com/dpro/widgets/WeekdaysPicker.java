@@ -86,6 +86,11 @@ public class WeekdaysPicker extends LinearLayout {
         initView(attrs);
     }
 
+    /**
+     * Adds an listener for selection change
+     *
+     * @param changeListener Listener
+     */
     public void setOnWeekdaysChangeListener(OnWeekdaysChangeListener changeListener) {
         this.changeListener = changeListener;
     }
@@ -250,12 +255,24 @@ public class WeekdaysPicker extends LinearLayout {
         }
     }
 
+    /**
+     * Get selected days as {@link Integer}
+     * Day value is {@link java.util.Calendar}
+     *
+     * @return {@link List} of selected days as {@link Integer}
+     */
     public List<Integer> getSelectedDays() {
         List<Integer> list = new ArrayList<>(selectedDays);
         Collections.sort(list);
         return list;
     }
 
+    /**
+     * Set days
+     * Day value is {@link java.util.Calendar}
+     *
+     * @param list {@link List} of which days should select
+     */
     public void setSelectedDays(List<Integer> list) {
         for (int day = 1; day <= 7; day++) {
             if (!weekend && !(day == SATURDAY || day == SUNDAY)) {
@@ -264,14 +281,31 @@ public class WeekdaysPicker extends LinearLayout {
         }
     }
 
+    /**
+     * Select only one day
+     * Day value is {@link java.util.Calendar}
+     *
+     * @param day Only one day to select
+     */
     public void selectDay(int day) {
         setSelectedDays(Collections.singletonList(day));
     }
 
+    /**
+     * Get selected days as {@link String} in defalut {@link Locale}
+     *
+     * @return {@link List} of selected days as {@link String}
+     */
     public List<String> getSelectedDaysText() {
         return getSelectedDaysText(Locale.getDefault());
     }
 
+    /**
+     * Get selected days as {@link String} in provided {@link Locale}
+     *
+     * @param locale Language of days-text
+     * @return {@link List} of day-Strings
+     */
     public List<String> getSelectedDaysText(Locale locale) {
         List<String> dayTextList = new ArrayList<>();
         for (int dayIndex : getSelectedDays()) {
@@ -280,15 +314,40 @@ public class WeekdaysPicker extends LinearLayout {
         return dayTextList;
     }
 
+    /**
+     * Check if all days are selected
+     *
+     * @return true if all days are selected
+     */
     public boolean allDaysSelected() {
         return selectedDays.size() == 7;
     }
 
+    /**
+     * Check if no day is selected
+     *
+     * @return true if no day is selected
+     */
     public boolean noDaySelected() {
         return selectedDays.size() == 0;
     }
 
+    /**
+     * Check if user can select days
+     *
+     * @return if widget is editable
+     */
+    @Override
     public boolean isInEditMode() {
         return mEditable;
+    }
+
+    /**
+     * Enable/Disable userinteraction with the picker
+     *
+     * @param editable if user can interact
+     */
+    public void setEditable(boolean editable) {
+        mEditable = editable;
     }
 }
