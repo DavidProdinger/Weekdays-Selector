@@ -273,9 +273,13 @@ public class WeekdaysPicker extends LinearLayout {
      * @param list {@link List} of which days should select
      */
     public void setSelectedDays(List<Integer> list) {
-        for (int day = 1; day <= 7; day++) {
-            if (!weekend && !(day == SATURDAY || day == SUNDAY)) {
+        for (int day = SUNDAY; day <= SATURDAY; day++) {
+            if (weekend) {
                 setDaySelected((ImageView) findViewWithTag(day), list.contains(day));
+            } else {
+                if (day != SATURDAY && day != SUNDAY) {
+                    setDaySelected((ImageView) findViewWithTag(day), list.contains(day));
+                }
             }
         }
     }
