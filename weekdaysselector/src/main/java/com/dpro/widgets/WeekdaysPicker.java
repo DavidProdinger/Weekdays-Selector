@@ -217,7 +217,6 @@ public class WeekdaysPicker extends LinearLayout {
             addView(dayView);
         }
         setDaySelected(dayView, selected);
-        selectedDays.add(tag);
     }
 
     private int getDpFromPx(float value) {

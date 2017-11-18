@@ -1,6 +1,10 @@
 # Weekdays-Selector
 Widget for selecting the weekdays
 
+## Screenshots
+
+![Screenshot](/screenshots/Screenshot_Weekdaysselector_1.png)
+
 ## Installation
 
 ### Gradle
@@ -20,7 +24,7 @@ Add the dependency
 
 ```groovy
 dependencies {
-    compile 'com.github.DavidProdinger:weekdays-selector:1.0.1'
+    compile 'com.github.DavidProdinger:weekdays-selector:1.0.2'
 }
 ```
 
@@ -43,7 +47,7 @@ Add the dependency
 <dependency>
     <groupId>com.github.DavidProdinger</groupId>
     <artifactId>weekdays-selector</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 
