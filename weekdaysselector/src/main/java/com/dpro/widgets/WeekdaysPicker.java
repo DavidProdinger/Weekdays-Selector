@@ -243,11 +243,7 @@ public class WeekdaysPicker extends LinearLayout {
 
     private void toggleSelection(View v) {
         ImageView day = (ImageView) v;
-        if (day.isSelected()) {
-            setDaySelected(day, false);
-        } else {
-            setDaySelected(day, true);
-        }
+        setDaySelected(day, !day.isSelected());
 
         if (changeListener != null) {
             changeListener.onChange(this, (int) day.getTag(), getSelectedDays());
