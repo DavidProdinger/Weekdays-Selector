@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">WeekdaysSelector</string>
+    <string name="app_name" translatable="false">WeekdaysSelector</string>
+    <string-array name="recurrence">
+        <item>Every week</item>
+        <item>Every odd week</item>
+        <item>Every even week</item>
+    </string-array>
 </resources>

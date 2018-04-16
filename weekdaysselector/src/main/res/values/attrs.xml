@@ -8,5 +8,6 @@
         <attr name="sunday_first_day" format="boolean" />
         <attr name="show_weekend" format="boolean" />
         <attr name="full_size" format="boolean" />
+        <attr name="recurrence" format="boolean" />
     </declare-styleable>
 </resources>

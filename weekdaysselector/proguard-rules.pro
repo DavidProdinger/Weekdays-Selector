@@ -25,3 +25,7 @@
 #-renamesourcefileattribute SourceFile
 
 -keepattributes MethodParameters
+
+-keepclassmembers class ** {
+   public static final int *** parse(***);
+}

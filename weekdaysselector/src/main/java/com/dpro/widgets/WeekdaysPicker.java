@@ -8,8 +8,11 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 
@@ -36,6 +39,9 @@ import static java.util.Calendar.WEDNESDAY;
  */
 
 public class WeekdaysPicker extends LinearLayout {
+    public static final int ALL = 0;
+    public static final int ODD = 1;
+    public static final int EVEN = 2;
     TextDrawable.IBuilder selectedBuilder;
     TextDrawable.IBuilder unselectedBuilder;
     private int selectedDayBackgroundColor;
@@ -50,6 +56,7 @@ public class WeekdaysPicker extends LinearLayout {
     private boolean sunday_first_day = true;
     private boolean weekend = true;
     private boolean fullSize = false;
+    private boolean recurrence = false;
     private float dayViewPadding = 5;
     private float layoutWeight = 1.0f;
     private int height = 30;
@@ -57,8 +64,11 @@ public class WeekdaysPicker extends LinearLayout {
     private Set<Integer> selectedDays;
     private float fontSize = 14f;
     private OnWeekdaysChangeListener changeListener = null;
+    private OnWeekRecurrenceChangeListener recurrenceListener = null;
+    private LinearLayout recW;
     private LinearLayout row1;
     private LinearLayout row2;
+    private Spinner spinner;
 
     public WeekdaysPicker(Context context) {
         super(context);
@@ -95,6 +105,15 @@ public class WeekdaysPicker extends LinearLayout {
         this.changeListener = changeListener;
     }
 
+    /**
+     * Adds an listener for recurrence change
+     *
+     * @param recurrenceListener Listener
+     */
+    public void setOnWeekRecurrenceChangeListener(OnWeekRecurrenceChangeListener recurrenceListener) {
+        this.recurrenceListener = recurrenceListener;
+    }
+
     private void initView(AttributeSet attrs) {
         TypedArray a = mContext.getTheme().obtainStyledAttributes(
                 attrs,
@@ -108,6 +127,7 @@ public class WeekdaysPicker extends LinearLayout {
             sunday_first_day = a.getBoolean(R.styleable.WeekdaysPicker_sunday_first_day, true);
             weekend = a.getBoolean(R.styleable.WeekdaysPicker_show_weekend, true);
             fullSize = a.getBoolean(R.styleable.WeekdaysPicker_full_size, false);
+            recurrence = a.getBoolean(R.styleable.WeekdaysPicker_recurrence, false);
 
         } finally {
             a.recycle();
@@ -116,11 +136,7 @@ public class WeekdaysPicker extends LinearLayout {
     }
 
     private void initView() {
-        if (fullSize) {
-            setOrientation(LinearLayout.VERTICAL);
-        } else {
-            setOrientation(LinearLayout.HORIZONTAL);
-        }
+        setOrientation(VERTICAL);
         setGravity(Gravity.CENTER_VERTICAL);
         selectedDays = new HashSet<>();
         selectedDayBackgroundColor = mHighlightColor;
@@ -128,36 +144,66 @@ public class WeekdaysPicker extends LinearLayout {
         selectedTextColor = mTextColor;//Color.WHITE;
         unSelectedTextColor = mHighlightColor;
 
+        if (recurrence) {
+            final View view = this;
+
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(mContext, android.R.layout.simple_spinner_item, mContext.getResources().getStringArray(R.array.recurrence));
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+            spinner = new Spinner(mContext);
+            spinner.setAdapter(adapter);
+            spinner.setSelection(0);
+            spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View v, int index, long id) {
+                    if (recurrenceListener != null) {
+                        recurrenceListener.onWeekChange(view, getSelectedDays(), index);
+                    }
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    adapterView.setSelection(0);
+                }
+            });
+
+            recW = new LinearLayout(mContext);
+            recW.setOrientation(HORIZONTAL);
+            int p_8 = (int) getResources().getDisplayMetrics().density * 8;
+            recW.setPadding(p_8, p_8, p_8, p_8);
+            recW.addView(spinner);
+            addView(recW);
+        }
         row1 = new LinearLayout(mContext);
         row2 = new LinearLayout(mContext);
 
         // declare the builder object once.
         TextDrawable.IShapeBuilder selectedIShapeBuilder = TextDrawable.builder()
-                .beginConfig()
-                .textColor(selectedTextColor)
-                .fontSize(getDpFromPx(fontSize))
-                .bold()
-                .width(fullSize ? getScreenWidth() / 5 : getDpFromPx(width))
-                .height(getDpFromPx(height))
-                .endConfig();
+                                                                       .beginConfig()
+                                                                       .textColor(selectedTextColor)
+                                                                       .fontSize(getDpFromPx(fontSize))
+                                                                       .bold()
+                                                                       .width(fullSize ? getScreenWidth() / 5 : getDpFromPx(width))
+                                                                       .height(getDpFromPx(height))
+                                                                       .endConfig();
         TextDrawable.IShapeBuilder unselectedIShapeBuilder = TextDrawable.builder()
-                .beginConfig()
-                .textColor(unSelectedTextColor)
-                .fontSize(getDpFromPx(fontSize))
-                .bold()
-                .width(fullSize ? getScreenWidth() / 5 : getDpFromPx(width))
-                .height(getDpFromPx(height))
-                .endConfig();
+                                                                         .beginConfig()
+                                                                         .textColor(unSelectedTextColor)
+                                                                         .fontSize(getDpFromPx(fontSize))
+                                                                         .bold()
+                                                                         .width(fullSize ? getScreenWidth() / 5 : getDpFromPx(width))
+                                                                         .height(getDpFromPx(height))
+                                                                         .endConfig();
 
         if (fullSize) {
             selectedBuilder = selectedIShapeBuilder.roundRect(10);
             unselectedBuilder = unselectedIShapeBuilder.roundRect(10);
-            addView(row1);
             addView(row2);
         } else {
             selectedBuilder = selectedIShapeBuilder.round();
             unselectedBuilder = unselectedIShapeBuilder.round();
         }
+        addView(row1);
 
         // create DayViews
         if (sunday_first_day && weekend) {
@@ -195,7 +241,7 @@ public class WeekdaysPicker extends LinearLayout {
         dayView.setTag(tag);
         LinearLayout.LayoutParams layoutParams =
                 new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,
-                        LayoutParams.WRAP_CONTENT, layoutWeight);
+                                              LayoutParams.WRAP_CONTENT, layoutWeight);
         dayView.setLayoutParams(layoutParams);
         int padding = getDpFromPx(dayViewPadding);
         dayView.setPadding(padding, padding, padding, padding);
@@ -214,7 +260,7 @@ public class WeekdaysPicker extends LinearLayout {
                 row1.addView(dayView);
             }
         } else {
-            addView(dayView);
+            row1.addView(dayView);
         }
         setDaySelected(dayView, selected);
     }
@@ -348,5 +394,41 @@ public class WeekdaysPicker extends LinearLayout {
      */
     public void setEditable(boolean editable) {
         mEditable = editable;
+    }
+
+    /**
+     * Check if recurrence is enabled
+     *
+     * @return if recurrence is enabled
+     */
+    public boolean getRecurrence() {
+        return recurrence;
+    }
+
+    /**
+     * Enable/Disable recurrence
+     *
+     * @param recurrence recurrence
+     */
+    public void setRecurrence(boolean recurrence) {
+        this.recurrence = recurrence;
+    }
+
+    /**
+     * Get week recurrence
+     *
+     * @return everey, odd or even week recurrence
+     */
+    public int getWeekRecurrence() {
+        return spinner.getSelectedItemPosition();
+    }
+
+    /**
+     * Set week recurrence
+     *
+     * @param weekRecurrence every(0), odd(1) or even(2)
+     */
+    public void setWeekRecurrence(int weekRecurrence) {
+        spinner.setSelection(weekRecurrence);
     }
 }
