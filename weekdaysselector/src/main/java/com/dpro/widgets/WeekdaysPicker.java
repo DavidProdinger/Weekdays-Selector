@@ -65,10 +65,10 @@ public class WeekdaysPicker extends LinearLayout {
     private float fontSize = 14f;
     private OnWeekdaysChangeListener changeListener = null;
     private OnWeekRecurrenceChangeListener recurrenceListener = null;
-    private LinearLayout recW;
     private LinearLayout row1;
     private LinearLayout row2;
     private Spinner spinner;
+    private LinearLayout.LayoutParams layoutParams;
 
     public WeekdaysPicker(Context context) {
         super(context);
@@ -138,6 +138,10 @@ public class WeekdaysPicker extends LinearLayout {
     private void initView() {
         setOrientation(VERTICAL);
         setGravity(Gravity.CENTER_VERTICAL);
+
+        layoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, layoutWeight);
+        setLayoutParams(layoutParams);
+
         selectedDays = new HashSet<>();
         selectedDayBackgroundColor = mHighlightColor;
         unSelectedDayBackgroundColor = mBackgroundColor;//Color.LTGRAY;
@@ -167,15 +171,16 @@ public class WeekdaysPicker extends LinearLayout {
                 }
             });
 
-            recW = new LinearLayout(mContext);
-            recW.setOrientation(HORIZONTAL);
             int p_8 = (int) getResources().getDisplayMetrics().density * 8;
-            recW.setPadding(p_8, p_8, p_8, p_8);
-            recW.addView(spinner);
-            addView(recW);
+            spinner.setPadding(p_8, p_8, p_8, p_8);
+            addView(spinner);
         }
         row1 = new LinearLayout(mContext);
         row2 = new LinearLayout(mContext);
+        row1.setOrientation(HORIZONTAL);
+        row2.setOrientation(HORIZONTAL);
+        row1.setLayoutParams(layoutParams);
+        row2.setLayoutParams(layoutParams);
 
         // declare the builder object once.
         TextDrawable.IShapeBuilder selectedIShapeBuilder = TextDrawable.builder()
@@ -195,6 +200,7 @@ public class WeekdaysPicker extends LinearLayout {
                                                                          .height(getDpFromPx(height))
                                                                          .endConfig();
 
+        addView(row1);
         if (fullSize) {
             selectedBuilder = selectedIShapeBuilder.roundRect(10);
             unselectedBuilder = unselectedIShapeBuilder.roundRect(10);
@@ -203,7 +209,6 @@ public class WeekdaysPicker extends LinearLayout {
             selectedBuilder = selectedIShapeBuilder.round();
             unselectedBuilder = unselectedIShapeBuilder.round();
         }
-        addView(row1);
 
         // create DayViews
         if (sunday_first_day && weekend) {
@@ -239,9 +244,6 @@ public class WeekdaysPicker extends LinearLayout {
     private void createDayView(int tag, boolean selected) {
         ImageView dayView = new ImageView(mContext);
         dayView.setTag(tag);
-        LinearLayout.LayoutParams layoutParams =
-                new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,
-                                              LayoutParams.WRAP_CONTENT, layoutWeight);
         dayView.setLayoutParams(layoutParams);
         int padding = getDpFromPx(dayViewPadding);
         dayView.setPadding(padding, padding, padding, padding);
