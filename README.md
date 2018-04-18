@@ -24,7 +24,7 @@ Add the dependency
 
 ```groovy
 dependencies {
-    compile 'com.github.DavidProdinger:weekdays-selector:1.0.3'
+    compile 'com.github.DavidProdinger:weekdays-selector:1.0.4'
 }
 ```
 
@@ -47,7 +47,7 @@ Add the dependency
 <dependency>
     <groupId>com.github.DavidProdinger</groupId>
     <artifactId>weekdays-selector</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 </dependency>
 ```
 
