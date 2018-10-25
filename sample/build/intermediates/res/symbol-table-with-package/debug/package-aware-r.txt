@@ -287,7 +287,7 @@ attr ttcIndex
 attr viewInflaterClass
 attr voiceIcon
 attr weekend_color
-attr weekend_highlight_color
+attr weekend_text_color
 attr weekenddarker
 attr windowActionBar
 attr windowActionBarOverlay
@@ -744,7 +744,7 @@ id sw_show_weekend
 id sw_sunday_first
 id sw_text_color
 id sw_weekend_color
-id sw_weekend_highlight
+id sw_weekend_text_color
 id sw_weekenddarker
 id tabMode
 id tag_transition_group
@@ -1262,4 +1262,4 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
-styleable WeekdaysPicker background_color border_color border_highlight_color border_highlight_thickness border_thickness enabled full_size highlight_color recurrence show_weekend sunday_first_day text_color weekend_color weekend_highlight_color weekenddarker
+styleable WeekdaysPicker background_color border_color border_highlight_color border_highlight_thickness border_thickness enabled full_size highlight_color recurrence show_weekend sunday_first_day text_color weekend_color weekend_text_color weekenddarker

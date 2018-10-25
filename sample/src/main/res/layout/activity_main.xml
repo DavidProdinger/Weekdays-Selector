@@ -61,7 +61,7 @@
                 android:text="Set other weekend color" />
 
             <Switch
-                android:id="@+id/sw_weekend_highlight"
+                android:id="@+id/sw_weekend_text_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Weekend text color" />

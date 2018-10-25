@@ -51,7 +51,7 @@ public final class R {
         public static int text_color = 0x7f040020;
         public static int ttcIndex = 0x7f040021;
         public static int weekend_color = 0x7f040022;
-        public static int weekend_highlight_color = 0x7f040023;
+        public static int weekend_text_color = 0x7f040023;
         public static int weekenddarker = 0x7f040024;
     }
     public static final class color {
@@ -268,7 +268,7 @@ public final class R {
         public static int WeekdaysPicker_sunday_first_day = 10;
         public static int WeekdaysPicker_text_color = 11;
         public static int WeekdaysPicker_weekend_color = 12;
-        public static int WeekdaysPicker_weekend_highlight_color = 13;
+        public static int WeekdaysPicker_weekend_text_color = 13;
         public static int WeekdaysPicker_weekenddarker = 14;
     }
 }

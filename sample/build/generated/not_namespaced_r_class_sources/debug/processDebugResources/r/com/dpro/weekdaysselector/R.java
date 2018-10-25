@@ -2099,7 +2099,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int weekend_highlight_color=0x7f030113;
+    public static final int weekend_text_color=0x7f030113;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -2652,7 +2652,7 @@ public final class R {
     public static final int sw_sunday_first=0x7f080085;
     public static final int sw_text_color=0x7f080086;
     public static final int sw_weekend_color=0x7f080087;
-    public static final int sw_weekend_highlight=0x7f080088;
+    public static final int sw_weekend_text_color=0x7f080088;
     public static final int sw_weekenddarker=0x7f080089;
     public static final int tabMode=0x7f08008a;
     public static final int tag_transition_group=0x7f08008b;
@@ -9940,7 +9940,7 @@ public final class R {
      * <tr><td><code>{@link #WeekdaysPicker_sunday_first_day com.dpro.weekdaysselector:sunday_first_day}</code></td><td></td></tr>
      * <tr><td><code>{@link #WeekdaysPicker_text_color com.dpro.weekdaysselector:text_color}</code></td><td></td></tr>
      * <tr><td><code>{@link #WeekdaysPicker_weekend_color com.dpro.weekdaysselector:weekend_color}</code></td><td></td></tr>
-     * <tr><td><code>{@link #WeekdaysPicker_weekend_highlight_color com.dpro.weekdaysselector:weekend_highlight_color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #WeekdaysPicker_weekend_text_color com.dpro.weekdaysselector:weekend_text_color}</code></td><td></td></tr>
      * <tr><td><code>{@link #WeekdaysPicker_weekenddarker com.dpro.weekdaysselector:weekenddarker}</code></td><td></td></tr>
      * </table>
      * @see #WeekdaysPicker_background_color
@@ -9956,7 +9956,7 @@ public final class R {
      * @see #WeekdaysPicker_sunday_first_day
      * @see #WeekdaysPicker_text_color
      * @see #WeekdaysPicker_weekend_color
-     * @see #WeekdaysPicker_weekend_highlight_color
+     * @see #WeekdaysPicker_weekend_text_color
      * @see #WeekdaysPicker_weekenddarker
      */
     public static final int[] WeekdaysPicker={
@@ -10100,16 +10100,16 @@ public final class R {
      */
     public static final int WeekdaysPicker_weekend_color=12;
     /**
-     * <p>This symbol is the offset where the {@link com.dpro.weekdaysselector.R.attr#weekend_highlight_color}
+     * <p>This symbol is the offset where the {@link com.dpro.weekdaysselector.R.attr#weekend_text_color}
      * attribute's value can be found in the {@link #WeekdaysPicker} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.dpro.weekdaysselector:weekend_highlight_color
+     * @attr name com.dpro.weekdaysselector:weekend_text_color
      */
-    public static final int WeekdaysPicker_weekend_highlight_color=13;
+    public static final int WeekdaysPicker_weekend_text_color=13;
     /**
      * <p>This symbol is the offset where the {@link com.dpro.weekdaysselector.R.attr#weekenddarker}
      * attribute's value can be found in the {@link #WeekdaysPicker} array.

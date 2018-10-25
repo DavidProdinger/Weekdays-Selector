@@ -27,7 +27,6 @@ import static java.util.Calendar.TUESDAY;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
-    private final static String TAG = "MainAcitivty";
     private final LinkedHashMap<Integer, Boolean> mp = new LinkedHashMap<>();
     private WeekdaysPicker widget;
     private List<Integer> selected_days;
@@ -46,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         mp.put(THURSDAY, false);
         mp.put(FRIDAY, true);
         mp.put(TUESDAY, true);
-        mp.put(SATURDAY, false); //For duplicated values, the last one is counting
+        mp.put(SATURDAY, false); //For duplicated values, the first one is counting, but the last one is updating the selected value
 
         widget = findViewById(R.id.weekdays);
         widget.setOnWeekdaysChangeListener(new OnWeekdaysChangeListener() {
@@ -71,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                         // if even weeks selected
                         break;
                 }
-                Log.d(TAG, "WeekRecurrence changed " + even_week + " selected days: " + Arrays.toString(selectedDays.toArray()));
             }
         });
 
@@ -87,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         ((Switch) findViewById(R.id.sw_show_weekend)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_recurrence)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_weekenddarker)).setOnCheckedChangeListener(this);
-        ((Switch) findViewById(R.id.sw_weekend_highlight)).setOnCheckedChangeListener(this);
+        ((Switch) findViewById(R.id.sw_weekend_text_color)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_border_color)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_border_thickness)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_border_highlight_color)).setOnCheckedChangeListener(this);
@@ -135,8 +133,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             case R.id.sw_weekenddarker:
                 widget.setWeekendDarker(isChecked);
                 break;
-            case R.id.sw_weekend_highlight:
-                widget.setWeekendTextColor(isChecked ? Color.BLACK : Color.WHITE);
+            case R.id.sw_weekend_text_color:
+                widget.setWeekendTextColor(isChecked ? Color.BLUE : Color.WHITE);
                 break;
             case R.id.sw_border_color:
                 widget.setBorderColor(isChecked ? Color.BLUE : -1);

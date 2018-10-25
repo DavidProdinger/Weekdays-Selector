@@ -5,33 +5,27 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
-    ir-eligibility="IMPLEMENTED_INTERFACES_CHANGE"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1540456993135"
+    timestamp="1540458283353"
     token="-8964225357355078740"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="804" />
+        duration="392" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="229" />
+        duration="56" />
     <task
         name="verifier"
-        duration="177" />
+        duration="19" />
 
     <artifact
-        location="C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-        type="SPLIT" />
-    <artifact
         location="C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
 
     <build
@@ -80,17 +74,29 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="IMPLEMENTED_INTERFACES_CHANGE"
-        timestamp="1540456993135"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1540457985673"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1540458214440"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1540458283353"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
     </build>
 

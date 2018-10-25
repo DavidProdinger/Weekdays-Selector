@@ -16,7 +16,7 @@
         <attr format="boolean" name="full_size"/>
         <attr format="boolean" name="recurrence"/>
         <attr format="boolean" name="weekenddarker"/>
-        <attr format="color" name="weekend_highlight_color"/>
+        <attr format="color" name="weekend_text_color"/>
         <attr format="integer" name="border_thickness"/>
         <attr format="color" name="border_color"/>
         <attr format="integer" name="border_highlight_thickness"/>

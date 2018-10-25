@@ -189,14 +189,14 @@ public class WeekdaysPicker extends LinearLayout {
             fullSize = a.getBoolean(R.styleable.WeekdaysPicker_full_size, false);
             recurrence = a.getBoolean(R.styleable.WeekdaysPicker_recurrence, false);
             weekendDarker = a.getBoolean(R.styleable.WeekdaysPicker_weekenddarker, false);
-            mWeekendTextColor = a.getColor(R.styleable.WeekdaysPicker_weekend_highlight_color, -1);
+            mWeekendTextColor = a.getColor(R.styleable.WeekdaysPicker_weekend_text_color, -1);
             mBorderColor = a.getColor(R.styleable.WeekdaysPicker_border_color, -1);
             mBorderThickness = a.getColor(R.styleable.WeekdaysPicker_border_thickness, 4);
             mBorderHighlightColor = a.getColor(R.styleable.WeekdaysPicker_border_highlight_color, -1);
             mBorderHighlightThickness = a.getColor(R.styleable.WeekdaysPicker_border_highlight_thickness, 4);
             if (mWeekendTextColor == -1) {
                 mWeekendTextColorChanged = false;
-                mWeekendTextColor = Color.RED;
+                mWeekendTextColor = mHighlightColor;
             } else {
                 mWeekendTextColorChanged = true;
             }
@@ -493,7 +493,8 @@ public class WeekdaysPicker extends LinearLayout {
         if (mWeekendTextColorChanged) {
             unSelectedWeekendTextColor = mWeekendTextColor;
         } else {
-            unSelectedWeekendTextColor = isDarkColor(unSelectedWeekendColor) ? Color.RED : Color.DKGRAY;
+            unSelectedWeekendTextColor = unSelectedTextColor;
+            //unSelectedWeekendTextColor = isDarkColor(unSelectedWeekendColor) ? Color.RED : Color.DKGRAY;
         }
     }
 

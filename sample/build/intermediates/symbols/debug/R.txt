@@ -286,7 +286,7 @@ int attr ttcIndex 0x7f03010f
 int attr viewInflaterClass 0x7f030110
 int attr voiceIcon 0x7f030111
 int attr weekend_color 0x7f030112
-int attr weekend_highlight_color 0x7f030113
+int attr weekend_text_color 0x7f030113
 int attr weekenddarker 0x7f030114
 int attr windowActionBar 0x7f030115
 int attr windowActionBarOverlay 0x7f030116
@@ -743,7 +743,7 @@ int id sw_show_weekend 0x7f080084
 int id sw_sunday_first 0x7f080085
 int id sw_text_color 0x7f080086
 int id sw_weekend_color 0x7f080087
-int id sw_weekend_highlight 0x7f080088
+int id sw_weekend_text_color 0x7f080088
 int id sw_weekenddarker 0x7f080089
 int id tabMode 0x7f08008a
 int id tag_transition_group 0x7f08008b
@@ -1690,5 +1690,5 @@ int styleable WeekdaysPicker_show_weekend 9
 int styleable WeekdaysPicker_sunday_first_day 10
 int styleable WeekdaysPicker_text_color 11
 int styleable WeekdaysPicker_weekend_color 12
-int styleable WeekdaysPicker_weekend_highlight_color 13
+int styleable WeekdaysPicker_weekend_text_color 13
 int styleable WeekdaysPicker_weekenddarker 14
