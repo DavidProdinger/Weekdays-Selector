@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="recurrence">
+        <item>Every week</item>
+        <item>Every odd week</item>
+        <item>Every even week</item>
+    </string-array>
+    <declare-styleable name="WeekdaysPicker">
+        <attr format="boolean" name="enabled"/>
+        <attr format="color" name="highlight_color"/>
+        <attr format="color" name="weekend_color"/>
+        <attr format="color" name="background_color"/>
+        <attr format="color" name="text_color"/>
+        <attr format="boolean" name="sunday_first_day"/>
+        <attr format="boolean" name="show_weekend"/>
+        <attr format="boolean" name="full_size"/>
+        <attr format="boolean" name="recurrence"/>
+        <attr format="boolean" name="weekenddarker"/>
+        <attr format="color" name="weekend_highlight_color"/>
+        <attr format="integer" name="border_thickness"/>
+        <attr format="color" name="border_color"/>
+        <attr format="integer" name="border_highlight_thickness"/>
+        <attr format="color" name="border_highlight_color"/>
+    </declare-styleable>
+</resources>

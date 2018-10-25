@@ -1,0 +1,166 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:1-21:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\409be7a43b06e0984055f81c22101387\AndroidManifest.xml:17:1-22:12
+MERGED from [:weekdaysselector] C:\Users\Florian\Documents\Github\Weekdays-Selector\weekdaysselector\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v13:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-v13-28.0.0.aar\828c43b872685ab0cefd49041cf61933\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\a0179a1a8fea5bf3b7c714d58b49bc10\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8d4b0c068a2391e011d5832c9c223d49\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\3b066f28daf1eef2dc3012f1b507ec56\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\e5d72800b2fb7d5ed610458379db5f10\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\c50e0f7105d94785eb97c34b6dcffd14\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\e1dc832727812995b056a87968c32bdf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\8cd10a8e63b2a0df2bda6b656c10f4ef\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\438dea1e421affe3348458e1efa12dc3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\d780f6ba19d2d26fcd7dd3c3e479cad3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\2b9511336aeae1938b3efbf1469c10b6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\4eb16a325a133ad4a8e8ecaeea682012\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\311239b155037b65a5d2452bbb6754cd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\23d102ceb04799960eb38045779ee58e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\dbd17a755179584b594a552e7f1dfd60\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\614824239297e07eb6202f912e9c1fe9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a13c61331cfbfd89aead4d165f9dc258\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\076a88c3552d3321773f904c97d5b35f\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c4def9aeec5a0fc64b3bb4075ba09784\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d71ea05d0feeabc7dec7429ff6b39d16\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\851ed8d2748530b0cde4e606347b99d8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\934af06d1536edb70364c591eb0f872f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\784028fa946e206635fabc5ef2496efc\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\06ce4dacb4a0686d68ed748b381eb21a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\38eb2b62a0c8f97b2576da8f79cf5f41\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\d99de0d2aba6c2574850997922b6a3f3\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d270a52f93cb650c8050bab2b6315ce2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\b30f9d602964a5f475d8da38030a99e3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\com.amulyakhare.textdrawable-1.0.1.aar\ee327ffc0c4496078e000ce853585b8f\AndroidManifest.xml:2:1-14:12
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:1-21:12
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:1-21:12
+	package
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:1-21:12
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:5:5-19:19
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a13c61331cfbfd89aead4d165f9dc258\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a13c61331cfbfd89aead4d165f9dc258\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\076a88c3552d3321773f904c97d5b35f\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\076a88c3552d3321773f904c97d5b35f\AndroidManifest.xml:22:5-23:19
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\com.amulyakhare.textdrawable-1.0.1.aar\ee327ffc0c4496078e000ce853585b8f\AndroidManifest.xml:12:5-20
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\com.amulyakhare.textdrawable-1.0.1.aar\ee327ffc0c4496078e000ce853585b8f\AndroidManifest.xml:12:5-20
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a13c61331cfbfd89aead4d165f9dc258\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:8:9-48
+	android:roundIcon
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:11:9-40
+activity#com.dpro.weekdaysselector.MainActivity
+ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml:16:27-74
+uses-sdk
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\409be7a43b06e0984055f81c22101387\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\409be7a43b06e0984055f81c22101387\AndroidManifest.xml:20:5-44
+MERGED from [:weekdaysselector] C:\Users\Florian\Documents\Github\Weekdays-Selector\weekdaysselector\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-9:41
+MERGED from [:weekdaysselector] C:\Users\Florian\Documents\Github\Weekdays-Selector\weekdaysselector\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v13:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-v13-28.0.0.aar\828c43b872685ab0cefd49041cf61933\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v13:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-v13-28.0.0.aar\828c43b872685ab0cefd49041cf61933\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\a0179a1a8fea5bf3b7c714d58b49bc10\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\a0179a1a8fea5bf3b7c714d58b49bc10\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8d4b0c068a2391e011d5832c9c223d49\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8d4b0c068a2391e011d5832c9c223d49\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\3b066f28daf1eef2dc3012f1b507ec56\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\3b066f28daf1eef2dc3012f1b507ec56\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\e5d72800b2fb7d5ed610458379db5f10\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\e5d72800b2fb7d5ed610458379db5f10\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\c50e0f7105d94785eb97c34b6dcffd14\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\c50e0f7105d94785eb97c34b6dcffd14\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\e1dc832727812995b056a87968c32bdf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\e1dc832727812995b056a87968c32bdf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\8cd10a8e63b2a0df2bda6b656c10f4ef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\8cd10a8e63b2a0df2bda6b656c10f4ef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\438dea1e421affe3348458e1efa12dc3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\438dea1e421affe3348458e1efa12dc3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\d780f6ba19d2d26fcd7dd3c3e479cad3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\d780f6ba19d2d26fcd7dd3c3e479cad3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\2b9511336aeae1938b3efbf1469c10b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\2b9511336aeae1938b3efbf1469c10b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\4eb16a325a133ad4a8e8ecaeea682012\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\4eb16a325a133ad4a8e8ecaeea682012\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\311239b155037b65a5d2452bbb6754cd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\311239b155037b65a5d2452bbb6754cd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\23d102ceb04799960eb38045779ee58e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\23d102ceb04799960eb38045779ee58e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\dbd17a755179584b594a552e7f1dfd60\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\dbd17a755179584b594a552e7f1dfd60\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\614824239297e07eb6202f912e9c1fe9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\614824239297e07eb6202f912e9c1fe9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a13c61331cfbfd89aead4d165f9dc258\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a13c61331cfbfd89aead4d165f9dc258\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\076a88c3552d3321773f904c97d5b35f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\076a88c3552d3321773f904c97d5b35f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c4def9aeec5a0fc64b3bb4075ba09784\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c4def9aeec5a0fc64b3bb4075ba09784\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d71ea05d0feeabc7dec7429ff6b39d16\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d71ea05d0feeabc7dec7429ff6b39d16\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\851ed8d2748530b0cde4e606347b99d8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\851ed8d2748530b0cde4e606347b99d8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\934af06d1536edb70364c591eb0f872f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\934af06d1536edb70364c591eb0f872f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\784028fa946e206635fabc5ef2496efc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\784028fa946e206635fabc5ef2496efc\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\06ce4dacb4a0686d68ed748b381eb21a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\06ce4dacb4a0686d68ed748b381eb21a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\38eb2b62a0c8f97b2576da8f79cf5f41\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\38eb2b62a0c8f97b2576da8f79cf5f41\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\d99de0d2aba6c2574850997922b6a3f3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\d99de0d2aba6c2574850997922b6a3f3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d270a52f93cb650c8050bab2b6315ce2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\d270a52f93cb650c8050bab2b6315ce2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\b30f9d602964a5f475d8da38030a99e3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\b30f9d602964a5f475d8da38030a99e3\AndroidManifest.xml:20:5-44
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\com.amulyakhare.textdrawable-1.0.1.aar\ee327ffc0c4496078e000ce853585b8f\AndroidManifest.xml:8:5-10:41
+MERGED from [com.amulyakhare:com.amulyakhare.textdrawable:1.0.1] C:\Users\Florian\.gradle\caches\transforms-1\files-1.1\com.amulyakhare.textdrawable-1.0.1.aar\ee327ffc0c4496078e000ce853585b8f\AndroidManifest.xml:8:5-10:41
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Florian\Documents\Github\Weekdays-Selector\sample\src\main\AndroidManifest.xml

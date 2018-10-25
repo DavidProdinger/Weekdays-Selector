@@ -10,7 +10,156 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginTop="8dp"
-        app:recurrence="true"
+        app:recurrence="false"
         app:sunday_first_day="false" />
+
+    <TextView
+        android:id="@+id/tv_selected_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weekdays"
+        android:padding="15dp"
+        android:text="Selected days:" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_selected_days"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <Switch
+                android:id="@+id/sw_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Enable / Disable" />
+
+            <Switch
+                android:id="@+id/sw_highlight_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Highlight Color" />
+
+            <Switch
+                android:id="@+id/sw_background_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Background Color" />
+
+
+            <Switch
+                android:id="@+id/sw_weekenddarker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set other weekend color" />
+
+            <Switch
+                android:id="@+id/sw_weekend_highlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weekend text color" />
+
+            <Switch
+                android:id="@+id/sw_weekend_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weekend background Color" />
+
+            <Switch
+                android:id="@+id/sw_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text highlight Color" />
+
+            <Switch
+                android:id="@+id/sw_sunday_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sunday first day" />
+
+            <Switch
+                android:id="@+id/sw_show_weekend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Show weekend" />
+
+            <Switch
+                android:id="@+id/sw_recurrence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recurrence" />
+
+            <Switch
+                android:id="@+id/sw_border_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set border color" />
+
+            <Switch
+                android:id="@+id/sw_border_thickness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set border thickness" />
+
+            <Switch
+                android:id="@+id/sw_border_highlight_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set border highlight color" />
+
+            <Switch
+                android:id="@+id/sw_border_highlight_thickness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set border highlight thickness" />
+
+            <Switch
+                android:id="@+id/sw_fullsize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full size" />
+
+            <Switch
+                android:id="@+id/sw_customdays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom days" />
+
+            <Switch
+                android:id="@+id/sw_selectonlyone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select only one" />
+
+            <Switch
+                android:id="@+id/sw_setselecteddays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set selected days" />
+
+
+            <LinearLayout
+                android:id="@+id/weekrecurrenceview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get recurrence spinner view" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="recurrence">
+        <item>Jede Woche</item>
+        <item>Jede ungerade Woche</item>
+        <item>Jede gerade Woche</item>
+    </string-array>
+</resources>
