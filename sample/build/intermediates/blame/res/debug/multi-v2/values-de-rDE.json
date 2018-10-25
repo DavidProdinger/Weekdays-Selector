@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Florian\\Documents\\Github\\Weekdays-Selector\\sample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de-rDE\\values-de-rDE.xml",
+            "outputFile": "C:\\Users\\dprod\\Desktop\\FWEI\\Weekdays-Selector2\\sample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-de-rDE\\values-de-rDE.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Florian\\Documents\\Github\\Weekdays-Selector\\weekdaysselector\\build\\intermediates\\packaged_res\\debug\\values-de-rDE\\values-de-rDE.xml",
+                    "source": "C:\\Users\\dprod\\Desktop\\FWEI\\Weekdays-Selector2\\weekdaysselector\\build\\intermediates\\packaged_res\\debug\\values-de-rDE\\values-de-rDE.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
