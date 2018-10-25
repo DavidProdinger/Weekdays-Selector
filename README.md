@@ -1,4 +1,5 @@
 # Weekdays-Selector
+[![](https://jitpack.io/v/DavidProdinger/Weekdays-Selector.svg)](https://jitpack.io/#DavidProdinger/Weekdays-Selector)
 Widget for selecting the weekdays
 
 ## Screenshots
