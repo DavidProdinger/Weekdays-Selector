@@ -1,4 +1,0 @@
-#Tue Oct 23 23:42:53 CEST 2018
-base.0=C\:\\Users\\Florian\\Documents\\Github\\Weekdays-Selector\\sample\\build\\intermediates\\transforms\\dexMerger\\debug\\10
-path.0=classes.dex
-renamed.0=classes.dex
