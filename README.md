@@ -1,6 +1,7 @@
 # Weekdays-Selector
-[![](https://jitpack.io/v/DavidProdinger/Weekdays-Selector.svg)](https://jitpack.io/#DavidProdinger/Weekdays-Selector)
-Widget for selecting the weekdays
+> Widget for selecting the weekdays
+
+[![JitPack](https://jitpack.io/v/DavidProdinger/Weekdays-Selector.svg)](https://jitpack.io/#DavidProdinger/Weekdays-Selector)
 
 ## Screenshots
 
@@ -25,7 +26,7 @@ Add the dependency
 
 ```groovy
 dependencies {
-    compile 'com.github.DavidProdinger:weekdays-selector:1.0.4'
+    compile 'com.github.DavidProdinger:weekdays-selector:1.1.0'
 }
 ```
 
@@ -48,7 +49,7 @@ Add the dependency
 <dependency>
     <groupId>com.github.DavidProdinger</groupId>
     <artifactId>weekdays-selector</artifactId>
-    <version>1.0.4</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
@@ -109,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
 * `border_highlight_color`: Set the Border-Color from selected days (default=-1 no border)
 * `border_highlight_thickness`: Set the Border-Thickness from selected days (default=4)
 
-### Java
 ## Methods and Functions
 
 Assuming `widget` is an `WeekdaysPicker` object
@@ -185,7 +185,7 @@ widget.selectDay(Calendar.SUNDAY);
 
 ### Check if all Days are selected
 
-#### One time
+#### onCreate
 
 ```java
 if (widget.allDaysSelected()){
@@ -193,7 +193,7 @@ if (widget.allDaysSelected()){
 }
 ```
 
-#### In onchange
+#### onChange
 
 ```java
 widget.setOnWeekdaysChangeListener(new OnWeekdaysChangeListener() {
@@ -209,7 +209,7 @@ widget.setOnWeekdaysChangeListener(new OnWeekdaysChangeListener() {
 
 ### Check if no Day is selected
 
-#### One time
+#### onCreate
 
 ```java
 if (widget.noDaySelected()){
@@ -217,7 +217,7 @@ if (widget.noDaySelected()){
 }
 ```
 
-#### In onchange
+#### onChange
 
 ```java
 widget.setOnWeekdaysChangeListener(new OnWeekdaysChangeListener() {
