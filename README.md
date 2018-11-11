@@ -26,7 +26,7 @@ Add the dependency
 
 ```groovy
 dependencies {
-    compile 'com.github.DavidProdinger:weekdays-selector:1.1.0'
+    implementation 'com.github.DavidProdinger:weekdays-selector:1.1.0'
 }
 ```
 
