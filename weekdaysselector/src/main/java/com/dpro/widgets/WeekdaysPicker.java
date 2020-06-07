@@ -12,7 +12,6 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.graphics.drawable.shapes.RectShape;
 import android.os.Build;
-import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -23,13 +22,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
+import androidx.annotation.ColorInt;
+
 import com.amulyakhare.textdrawable.TextDrawable;
 
 import java.text.DateFormatSymbols;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
@@ -67,6 +67,7 @@ public class WeekdaysPicker extends LinearLayout {
     private int mHighlightColor = Color.RED;
     private TextDrawable.IBuilder selectedBuilder;
     private int mTextColor = Color.WHITE;
+    private int mTextUnselectedColor = mHighlightColor;
     private int mBackgroundColor = Color.LTGRAY;
     private TextDrawable.IBuilder unselectedBuilder;
     private TextDrawable.IBuilder unselectedWeekendBuilder;
@@ -184,6 +185,7 @@ public class WeekdaysPicker extends LinearLayout {
             mBackgroundColor = a.getColor(R.styleable.WeekdaysPicker_background_color, Color.LTGRAY);
             mWeekendColor = a.getColor(R.styleable.WeekdaysPicker_weekend_color, Color.GRAY);
             mTextColor = a.getColor(R.styleable.WeekdaysPicker_text_color, Color.WHITE);
+            mTextUnselectedColor = a.getColor(R.styleable.WeekdaysPicker_text_unselected_color, mHighlightColor);
             sunday_first_day = a.getBoolean(R.styleable.WeekdaysPicker_sunday_first_day, true);
             weekend = a.getBoolean(R.styleable.WeekdaysPicker_show_weekend, true);
             fullSize = a.getBoolean(R.styleable.WeekdaysPicker_full_size, false);
@@ -289,34 +291,29 @@ public class WeekdaysPicker extends LinearLayout {
 
         if (sunday_first_day && daySet.containsKey(SUNDAY)) {
             LinkedHashMap<Integer, Boolean> map = new LinkedHashMap<>();
-            Iterator it = daySet.entrySet().iterator();
             int x = 0;
             map.put(SUNDAY, daySet.get(SUNDAY));
-            while (it.hasNext()) {
+            for (Map.Entry<Integer, Boolean> entry : daySet.entrySet()) {
                 if (x == 0) {
                     x++;
                     continue;
                 }
-                Map.Entry entry = (Map.Entry) it.next();
-                map.put((int) entry.getKey(), (boolean) entry.getValue());
+                map.put(entry.getKey(), entry.getValue());
                 x++;
             }
             daySet = map;
         }
 
-        Iterator it = daySet.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry entry = (Map.Entry) it.next();
+        for (Map.Entry<Integer, Boolean> entry : daySet.entrySet()) {
             System.out.println("ID " + entry.getKey());
-            if (!weekend && ((int) entry.getKey() == SATURDAY || (int) entry.getKey() == SUNDAY)) {
-                //Weekend
-            } else {
+            if (weekend || (entry.getKey() != SATURDAY && entry.getKey() != SUNDAY)) {
                 if (findViewWithTag(entry.getKey()) != null) {
-                    setDaySelected((ImageView) findViewWithTag(entry.getKey()), (boolean) entry.getValue());
+                    setDaySelected((ImageView) findViewWithTag(entry.getKey()), entry.getValue());
                 } else {
-                    createDayView((int) entry.getKey(), (boolean) entry.getValue());
+                    createDayView(entry.getKey(), entry.getValue());
                 }
             }
+
         }
     }
 
@@ -496,7 +493,7 @@ public class WeekdaysPicker extends LinearLayout {
         unSelectedDayBackgroundColor = mBackgroundColor;//Color.LTGRAY;
         unSelectedWeekendColor = weekendDarker ? mWeekendColor : mBackgroundColor; //Color.GRAY || Color.LTGRAY
         selectedTextColor = mTextColor;//Color.WHITE;
-        unSelectedTextColor = mHighlightColor;
+        unSelectedTextColor = mTextUnselectedColor;
 
         if (mWeekendTextColorChanged) {
             unSelectedWeekendTextColor = mWeekendTextColor;
@@ -799,15 +796,6 @@ public class WeekdaysPicker extends LinearLayout {
     }
 
     /**
-     * Set the highlightcolor
-     *
-     * @param color
-     */
-    public void setHighlightColor(String color) {
-        mHighlightColor = Color.parseColor(color);
-    }
-
-    /**
      * get highlightcolor
      */
     public int getHighlightColor() {
@@ -819,17 +807,17 @@ public class WeekdaysPicker extends LinearLayout {
      *
      * @param color
      */
-    public void setHighlightColor(@ColorInt int color) {
-        mHighlightColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
+    public void setHighlightColor(String color) {
+        mHighlightColor = Color.parseColor(color);
     }
 
     /**
-     * Set the backgroundcolor
+     * Set the highlightcolor
      *
      * @param color
      */
-    public void setBackgroundColor(String color) {
-        mBackgroundColor = Color.parseColor(color);
+    public void setHighlightColor(@ColorInt int color) {
+        mHighlightColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
     }
 
     /**
@@ -844,17 +832,17 @@ public class WeekdaysPicker extends LinearLayout {
      *
      * @param color
      */
-    public void setBackgroundColor(@ColorInt int color) {
-        mBackgroundColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
+    public void setBackgroundColor(String color) {
+        mBackgroundColor = Color.parseColor(color);
     }
 
     /**
-     * Set the weekendcolor
+     * Set the backgroundcolor
      *
      * @param color
      */
-    public void setWeekendColor(String color) {
-        mWeekendColor = Color.parseColor(color);
+    public void setBackgroundColor(@ColorInt int color) {
+        mBackgroundColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
     }
 
     /**
@@ -869,17 +857,17 @@ public class WeekdaysPicker extends LinearLayout {
      *
      * @param color
      */
-    public void setWeekendColor(@ColorInt int color) {
-        mWeekendColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
+    public void setWeekendColor(String color) {
+        mWeekendColor = Color.parseColor(color);
     }
 
     /**
-     * Set the textcolor
+     * Set the weekendcolor
      *
      * @param color
      */
-    public void setTextColor(String color) {
-        mTextColor = Color.parseColor(color);
+    public void setWeekendColor(@ColorInt int color) {
+        mWeekendColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
     }
 
     /**
@@ -894,18 +882,42 @@ public class WeekdaysPicker extends LinearLayout {
      *
      * @param color
      */
+    public void setTextColor(String color) {
+        mTextColor = Color.parseColor(color);
+    }
+
+    /**
+     * Set the textcolor
+     *
+     * @param color
+     */
     public void setTextColor(@ColorInt int color) {
         mTextColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
     }
 
     /**
-     * Set the weekendtextcolor
+     * get text unselected color
+     */
+    public int getTextUnselectedColor() {
+        return mTextUnselectedColor;
+    }
+
+    /**
+     * Set the text unselected color
      *
      * @param color
      */
-    public void setWeekendTextColor(String color) {
-        mWeekendTextColorChanged = true;
-        mWeekendTextColor = Color.parseColor(color);
+    public void setTextUnselectedColor(String color) {
+        mTextUnselectedColor = Color.parseColor(color);
+    }
+
+    /**
+     * Set the text unselected color
+     *
+     * @param color
+     */
+    public void setTextUnselectedColor(@ColorInt int color) {
+        mTextUnselectedColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
     }
 
     /**
@@ -920,18 +932,19 @@ public class WeekdaysPicker extends LinearLayout {
      *
      * @param color
      */
-    public void setWeekendTextColor(@ColorInt int color) {
+    public void setWeekendTextColor(String color) {
         mWeekendTextColorChanged = true;
-        mWeekendTextColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
+        mWeekendTextColor = Color.parseColor(color);
     }
 
     /**
-     * Set the bordercolor
+     * Set the weekendtextcolor
      *
      * @param color
      */
-    public void setBorderColor(String color) {
-        mBorderColor = Color.parseColor(color);
+    public void setWeekendTextColor(@ColorInt int color) {
+        mWeekendTextColorChanged = true;
+        mWeekendTextColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
     }
 
     /**
@@ -946,8 +959,24 @@ public class WeekdaysPicker extends LinearLayout {
      *
      * @param color
      */
+    public void setBorderColor(String color) {
+        mBorderColor = Color.parseColor(color);
+    }
+
+    /**
+     * Set the bordercolor
+     *
+     * @param color
+     */
     public void setBorderColor(@ColorInt int color) {
         mBorderColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
+    }
+
+    /**
+     * get borderhighlightcolor
+     */
+    public int getBorderHighlightColor() {
+        return mBorderHighlightColor;
     }
 
     /**
@@ -957,13 +986,6 @@ public class WeekdaysPicker extends LinearLayout {
      */
     public void setBorderHighlightColor(String color) {
         mBorderHighlightColor = Color.parseColor(color);
-    }
-
-    /**
-     * get borderhighlightcolor
-     */
-    public int getBorderHighlightColor() {
-        return mBorderHighlightColor;
     }
 
     /**

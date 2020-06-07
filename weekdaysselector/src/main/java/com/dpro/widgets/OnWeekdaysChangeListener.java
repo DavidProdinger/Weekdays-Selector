@@ -9,7 +9,6 @@ import java.util.List;
  * <p>
  * Created by David Prodinger <dprodinger@aon.at> on 24.10.2017.
  */
-
 public interface OnWeekdaysChangeListener {
     /**
      * @param view             View of Weekdayspicker

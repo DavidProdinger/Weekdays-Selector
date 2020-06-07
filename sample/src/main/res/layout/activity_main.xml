@@ -76,7 +76,13 @@
                 android:id="@+id/sw_text_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Text highlight Color" />
+                android:text="Text selected Color" />
+
+            <Switch
+                android:id="@+id/sw_text_unselected_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text unselected Color" />
 
             <Switch
                 android:id="@+id/sw_sunday_first"

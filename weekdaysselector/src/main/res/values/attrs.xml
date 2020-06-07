@@ -5,6 +5,7 @@
         <attr name="highlight_color" format="color" />
         <attr name="background_color" format="color" />
         <attr name="text_color" format="color" />
+        <attr name="text_unselected_color" format="color" />
         <attr name="sunday_first_day" format="boolean" />
         <attr name="show_weekend" format="boolean" />
         <attr name="weekenddarker" format="boolean" />
