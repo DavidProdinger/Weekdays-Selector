@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         ((Switch) findViewById(R.id.sw_background_color)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_weekend_color)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_text_color)).setOnCheckedChangeListener(this);
+        ((Switch) findViewById(R.id.sw_text_unselected_color)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_sunday_first)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_show_weekend)).setOnCheckedChangeListener(this);
         ((Switch) findViewById(R.id.sw_recurrence)).setOnCheckedChangeListener(this);
@@ -120,6 +121,9 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
                 break;
             case R.id.sw_text_color:
                 widget.setTextColor(isChecked ? Color.BLUE : Color.WHITE);
+                break;
+            case R.id.sw_text_unselected_color:
+                widget.setTextUnselectedColor(isChecked ? Color.GRAY : Color.RED);
                 break;
             case R.id.sw_sunday_first:
                 widget.setSundayFirstDay(isChecked);

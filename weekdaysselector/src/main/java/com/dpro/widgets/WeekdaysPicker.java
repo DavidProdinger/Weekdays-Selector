@@ -30,7 +30,6 @@ import java.text.DateFormatSymbols;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
@@ -68,6 +67,7 @@ public class WeekdaysPicker extends LinearLayout {
     private int mHighlightColor = Color.RED;
     private TextDrawable.IBuilder selectedBuilder;
     private int mTextColor = Color.WHITE;
+    private int mTextUnselectedColor = mHighlightColor;
     private int mBackgroundColor = Color.LTGRAY;
     private TextDrawable.IBuilder unselectedBuilder;
     private TextDrawable.IBuilder unselectedWeekendBuilder;
@@ -185,6 +185,7 @@ public class WeekdaysPicker extends LinearLayout {
             mBackgroundColor = a.getColor(R.styleable.WeekdaysPicker_background_color, Color.LTGRAY);
             mWeekendColor = a.getColor(R.styleable.WeekdaysPicker_weekend_color, Color.GRAY);
             mTextColor = a.getColor(R.styleable.WeekdaysPicker_text_color, Color.WHITE);
+            mTextUnselectedColor = a.getColor(R.styleable.WeekdaysPicker_text_unselected_color, mHighlightColor);
             sunday_first_day = a.getBoolean(R.styleable.WeekdaysPicker_sunday_first_day, true);
             weekend = a.getBoolean(R.styleable.WeekdaysPicker_show_weekend, true);
             fullSize = a.getBoolean(R.styleable.WeekdaysPicker_full_size, false);
@@ -290,34 +291,29 @@ public class WeekdaysPicker extends LinearLayout {
 
         if (sunday_first_day && daySet.containsKey(SUNDAY)) {
             LinkedHashMap<Integer, Boolean> map = new LinkedHashMap<>();
-            Iterator it = daySet.entrySet().iterator();
             int x = 0;
             map.put(SUNDAY, daySet.get(SUNDAY));
-            while (it.hasNext()) {
+            for (Map.Entry<Integer, Boolean> entry : daySet.entrySet()) {
                 if (x == 0) {
                     x++;
                     continue;
                 }
-                Map.Entry entry = (Map.Entry) it.next();
-                map.put((int) entry.getKey(), (boolean) entry.getValue());
+                map.put(entry.getKey(), entry.getValue());
                 x++;
             }
             daySet = map;
         }
 
-        Iterator it = daySet.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry entry = (Map.Entry) it.next();
+        for (Map.Entry<Integer, Boolean> entry : daySet.entrySet()) {
             System.out.println("ID " + entry.getKey());
-            if (!weekend && ((int) entry.getKey() == SATURDAY || (int) entry.getKey() == SUNDAY)) {
-                //Weekend
-            } else {
+            if (weekend || (entry.getKey() != SATURDAY && entry.getKey() != SUNDAY)) {
                 if (findViewWithTag(entry.getKey()) != null) {
-                    setDaySelected((ImageView) findViewWithTag(entry.getKey()), (boolean) entry.getValue());
+                    setDaySelected((ImageView) findViewWithTag(entry.getKey()), entry.getValue());
                 } else {
-                    createDayView((int) entry.getKey(), (boolean) entry.getValue());
+                    createDayView(entry.getKey(), entry.getValue());
                 }
             }
+
         }
     }
 
@@ -497,7 +493,7 @@ public class WeekdaysPicker extends LinearLayout {
         unSelectedDayBackgroundColor = mBackgroundColor;//Color.LTGRAY;
         unSelectedWeekendColor = weekendDarker ? mWeekendColor : mBackgroundColor; //Color.GRAY || Color.LTGRAY
         selectedTextColor = mTextColor;//Color.WHITE;
-        unSelectedTextColor = mHighlightColor;
+        unSelectedTextColor = mTextUnselectedColor;
 
         if (mWeekendTextColorChanged) {
             unSelectedWeekendTextColor = mWeekendTextColor;
@@ -897,6 +893,31 @@ public class WeekdaysPicker extends LinearLayout {
      */
     public void setTextColor(@ColorInt int color) {
         mTextColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
+    }
+
+    /**
+     * get text unselected color
+     */
+    public int getTextUnselectedColor() {
+        return mTextUnselectedColor;
+    }
+
+    /**
+     * Set the text unselected color
+     *
+     * @param color
+     */
+    public void setTextUnselectedColor(String color) {
+        mTextUnselectedColor = Color.parseColor(color);
+    }
+
+    /**
+     * Set the text unselected color
+     *
+     * @param color
+     */
+    public void setTextUnselectedColor(@ColorInt int color) {
+        mTextUnselectedColor = Color.argb(255, Color.red(color), Color.green(color), Color.blue(color));
     }
 
     /**
