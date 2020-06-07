@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
 * `highlight_color`: Color of selected days and unselected Text (default=Color.RED)
 * `background_color`: Background-Color of unselected days (default=Color.LTGRAY)
 * `text_color`: Color of selected days text (default=Color.WHITE)
+* `text_unselected_color`: Color of unselected days text (default=`highlight_color`)
 * `sunday_first_day`: Starting with Sunday or Monday (default=true)
 * `show_weekend`: Display weekend (Satuarday and Sunday) (default=true)
 * `weekenddarker`: Allows that weekend has another color (default=false)
