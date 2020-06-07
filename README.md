@@ -26,7 +26,7 @@ Add the dependency
 
 ```groovy
 dependencies {
-    implementation 'com.github.DavidProdinger:weekdays-selector:1.1.0'
+    implementation 'com.github.DavidProdinger:weekdays-selector:1.1.1'
 }
 ```
 
@@ -49,7 +49,7 @@ Add the dependency
 <dependency>
     <groupId>com.github.DavidProdinger</groupId>
     <artifactId>weekdays-selector</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
@@ -120,32 +120,32 @@ WeekdaysPicker widget = (WeekdaysPicker) findViewById(R.id.weekdays);
 
 ```java
 widget.setOnWeekdaysChangeListener(new OnWeekdaysChangeListener() {
-            @Override
-            public void onChange(View view, int clickedDayOfWeek, List<Integer> selectedDays) {
-                // Do Something
-            }
-        });
+    @Override
+    public void onChange(View view, int clickedDayOfWeek, List<Integer> selectedDays) {
+        // Do Something
+    }
+});
 ```
 
 #### OnWeekRecurrenceChange Listener
 ```java
 widget.setOnWeekRecurrenceChangeListener(new OnWeekRecurrenceChangeListener() {
-            @Override
-            public void onWeekChange(View view, List<Integer> selectedDays, int even_week) {
-                // Do something else
-                switch (even_week) {
-                    case WeekdaysPicker.ALL:
-                        // if all weeks selected
-                        break;
-                    case WeekdaysPicker.ODD:
-                        // if odd weeks selected
-                        break;
-                    case WeekdaysPicker.EVEN:
-                        // if even weeks selected
-                        break;
-                } 
-            }
-        });
+    @Override
+    public void onWeekChange(View view, List<Integer> selectedDays, int even_week) {
+        // Do something else
+        switch (even_week) {
+            case WeekdaysPicker.ALL:
+                // if all weeks selected
+                break;
+            case WeekdaysPicker.ODD:
+                // if odd weeks selected
+                break;
+            case WeekdaysPicker.EVEN:
+                // if even weeks selected
+                break;
+        } 
+    }
+});
 ```
 
 ### Get selected Days
@@ -272,6 +272,7 @@ widget.setHighlightColor(Color.RED);
 widget.setBackgroundColor(Color.LTGRAY);
 widget.setWeekendColor(Color.GRAY);
 widget.setTextColor(Color.WHITE);
+widget.setTextUnselectedColor(Color.WHITE);
 widget.setSundayFirstDay(true);
 widget.setShowWeekend(true);
 widget.setRecurrence(true);
