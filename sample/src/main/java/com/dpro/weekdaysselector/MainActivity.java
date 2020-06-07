@@ -2,19 +2,19 @@ package com.dpro.weekdaysselector;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.dpro.widgets.OnWeekRecurrenceChangeListener;
 import com.dpro.widgets.OnWeekdaysChangeListener;
 import com.dpro.widgets.WeekdaysPicker;
 
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -23,6 +23,7 @@ import static java.util.Calendar.SATURDAY;
 import static java.util.Calendar.SUNDAY;
 import static java.util.Calendar.THURSDAY;
 import static java.util.Calendar.TUESDAY;
+import static java.util.Calendar.WEDNESDAY;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        selected_days = Arrays.asList(Calendar.SATURDAY, Calendar.WEDNESDAY, Calendar.THURSDAY, Calendar.SUNDAY);
+        selected_days = Arrays.asList(SATURDAY, WEDNESDAY, THURSDAY, SUNDAY);
 
         mp.put(SUNDAY, true);
         mp.put(SATURDAY, true);
